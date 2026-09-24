@@ -1,0 +1,21 @@
+:root{--bg:#f3f6f4;--ink:#16211c;--card:#fff;--line:#d5ded9;--brand:#0b6b57;--danger:#b3261e;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5}
+nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding:12px 20px;background:var(--brand);color:#fff}
+nav a{color:#d6efe7;text-decoration:none;padding:4px 0}nav a.active{color:#fff;border-bottom:2px solid #fff}
+.brand{margin-right:auto;font-size:1.15rem}
+main{max-width:1000px;margin:0 auto;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px;display:flex;flex-direction:column;gap:8px}
+.card.row,.row{flex-direction:row;justify-content:space-between;align-items:center;display:flex;gap:12px;flex-wrap:wrap}
+.card h3,.card p{margin:0}.narrow{max-width:380px;margin:40px auto}
+.stat b{font-size:2rem;color:var(--brand)}
+.tag{align-self:flex-start;background:#e2f1ec;color:var(--brand);padding:2px 10px;border-radius:99px;font-size:.8rem;text-transform:capitalize}
+input,select,button{font:inherit;padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:#fff}
+button{background:var(--brand);color:#fff;border-color:var(--brand);cursor:pointer}
+button.ghost{background:#fff;color:var(--brand)}nav button.ghost{background:transparent;color:#fff;border-color:#fff}
+button.danger{background:var(--danger);border-color:var(--danger)}button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.filters input,.filters select{flex:1;min-width:150px}
+.pager{display:flex;gap:14px;align-items:center;justify-content:center;margin:20px 0}
+.err{color:var(--danger)}
+@media(max-width:600px){main{padding:12px}nav{gap:10px}}

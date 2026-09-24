@@ -1,0 +1,11 @@
+const express = require('express'), cors = require('cors');
+const { errorHandler } = require('./middleware');
+const app = express();
+app.use(cors(), express.json());
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/events', require('./routes/events'));
+app.use('/api/resources', require('./routes/resources'));
+app.use('/api/dashboard', require('./routes/dashboard'));
+app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
+app.use(errorHandler);
+module.exports = app;
